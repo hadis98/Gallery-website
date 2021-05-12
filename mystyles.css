@@ -1,0 +1,429 @@
+/* html{
+  scroll-behavior: smooth;
+} */
+.text-danger {
+  font-family: "Princess Sofia", cursive;
+  color: #e5904d !important;
+  text-shadow: 1px 1px black;
+}
+#s1_header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+#s1_header aside {
+  text-align: center;
+  grid-column: 2 / 4;
+  grid-row: 4 / 5;
+}
+@media (max-width: 992px) {
+  #s1_header {
+    height: 50vh !important;
+  }
+  #s1_header aside {
+    grid-row: 4 / 5;
+  }
+  #s1_header .display-4 {
+    font-size: 28px;
+  }
+  #s1_header h5 {
+    font-size: 12px;
+  }
+}
+
+#s1_header {
+  background-color: #1e1109;
+}
+#s2_trio {
+  background-color: #fefaf7;
+}
+#s3_painting_of_the_week {
+  background-color: #26221f;
+}
+#s4_about {
+  background-color: #f0e9d7;
+}
+#s5_prints {
+  background-color: #fefaf7;
+}
+#s6_paintings {
+  background-color: #101014;
+}
+#s7_drawings {
+  background-color: #f0e9d7;
+}
+#s8_contact {
+  background-color: #fefaf7;
+}
+#s9_footer {
+  background-color: #414046;
+}
+#s10_copyright {
+  background-color: #000;
+}
+
+/*-----------s1_header ---------*/
+#s1_header {
+  background: url("rembrandt/img/interface-imgs/s1-header-lg-center.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/*-----------s2_trio ---------*/
+
+.myGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+@media (max-width: 768px) {
+  .myGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .mySubGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .myGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .mySubGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 15px;
+  }
+  #s2_trio h2 ,#s2_trio p{
+    text-align: center;
+  }
+  #s2_trio img{
+    margin: auto;
+  }
+}
+/*-----------s3_painting_of_the_week ---------*/
+
+/*-----------s4_about ---------*/
+
+.s4_about_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+  grid-template-areas:
+    "img-selfportrait img-selfportrait img-selfportrait"
+    "hd-about hd-about hd-about"
+    "txt-about txt-about txt-about";
+}
+
+.img-selfportrait {
+  grid-area: img-selfportrait;
+  grid-column: 2 / 3;
+}
+.hd-about {
+  grid-area: hd-about;
+  text-align: center;
+}
+.txt-about {
+  grid-area: txt-about;
+  line-height: 2;
+}
+@media (min-width: 768px) {
+  .s4_about_grid {
+    grid-template-areas:
+      "img-selfportrait hd-about hd-about "
+      "img-selfportrait txt-about txt-about"
+      "img-selfportrait txt-about txt-about";
+  }
+  .img-selfportrait {
+    grid-column: 1 / 2;
+  }
+  .hd-about {
+    text-align: left;
+
+    padding-left: 20px;
+  }
+  .txt-about {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .s4_about_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+      "hd-about hd-about"
+      "txt-about img-selfportrait";
+  }
+
+  .img-selfportrait {
+    grid-column: 2 / -1;
+  }
+}
+/*-----------s5_prints ---------*/
+
+.my-thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.my-thumbs img {
+  display: block;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
+}
+.my-thumbs .my-bk-image {
+  box-shadow: 0px 0px 0px rgb(0, 0, 0, 0);
+}
+
+/*-----------s6_paintings ---------*/
+.my-paintings-container {
+  display: grid;
+  min-height: 600px;
+  background: white;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "one one two three three"
+    "one one four five five"
+    "six seven seven five five"
+    "six eight nine nine ten";
+  grid-gap: 2px;
+  border: 2px solid white;
+  outline: none;
+}
+.my-cursor {
+  cursor: pointer;
+  outline: none;
+}
+#s6_paintings aside {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+}
+#s6_paintings .windmill {
+  width: 60%;
+  justify-self: end;
+  align-self: end;
+}
+.paintings-1 {
+  background: url("rembrandt/img/paintings-img/1920px-P1150002_Cognacq-Jay_Rembrandt_anesse_de_Balaam_rwk.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: one;
+}
+.paintings-2 {
+  background: url("rembrandt/img/paintings-img/1920px-Rembrandt_-_Rembrandt_and_Saskia_in_the_Scene_of_the_Prodigal_Son_-_Google_Art_Project.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: two;
+}
+.paintings-3 {
+  background: url("rembrandt/img/paintings-img/1920px-Rembrandt_van_Rijn_-_Portrait_of_Willem_Burchgraeff_-_O_854_-_Slovak_National_Gallery.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: three;
+}
+.paintings-4 {
+  background: url("rembrandt/img/paintings-img/1920px-Rembrandt_van_Rijn_198.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: four;
+}
+.paintings-5 {
+  background: url("rembrandt/img/paintings-img/2560px-Rembrandt_Harmensz._van_Rijn_-_Old_Man_with_a_Gold_Chain_-_Google_Art_Project.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: five;
+}
+.paintings-6 {
+  background: url("rembrandt/img/paintings-img/2560px-Rembrandt_Harmensz._van_Rijn_-_Zelfportret_op_jeugdige_leeftijd_-_Google_Art_Project.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: six;
+}
+.paintings-7 {
+  background: url("rembrandt/img/paintings-img/2880px-Rembrandt_The_Artist_in_his_studio.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: seven;
+}
+.paintings-8 {
+  background: url("rembrandt/img/paintings-img/Rembrandt_-_Portrait_of_a_Woman_with_Gloves_-_NGI.808.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: eight;
+}
+.paintings-9 {
+  background: url("rembrandt/img/paintings-img/Rembrandt_van_Rijn_197.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: nine;
+}
+.paintings-10 {
+  background: url("rembrandt/img/paintings-img/Rembrandt-SMELL.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: ten;
+}
+@media(max-width:768px){
+  #s6_paintings aside{    
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "my-paintings-area"
+        "windmill"
+    ;
+}
+    
+.my-paintings-area{
+    grid-area: my-paintings-area;
+}
+
+.windmill{
+    grid-area: windmill;
+} 
+}
+@media(max-width:576px){
+  .windmill{
+    display: none;
+  }
+}
+/*-----------s7_drawings ---------*/
+
+/*-----------s8_contact ---------*/
+.contact-copy {
+  grid-area: contact-copy;
+}
+.contact-map {
+  grid-area: contact-map;
+}
+.contact-picture {
+  grid-area: contact-picture;
+}
+.contacts_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(2,1fr); */
+  grid-auto-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-template:
+    "contact-copy contact-map contact-map"
+    "contact-picture contact-map contact-map";
+}
+
+@media (max-width: 768px) {
+  .contacts_grid {
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: repeat(3, auto);
+    grid-template:
+      "contact-picture contact-copy"
+      "contact-map contact-map"
+      "contact-map contact-map";
+  }
+  .contact-picture {
+    justify-self: end;
+  }
+}
+@media (max-width: 576px) {
+  .contacts_grid {
+    grid-template-columns: auto;
+    grid-auto-rows: repeat(4, auto);
+    grid-template:
+      "contact-picture"
+      "contact-copy"
+      "contact-map"
+      "contact-map"
+      "contact-map";
+  }
+  .contact-picture {
+    transform: scaleX(-1);
+    justify-self: center;
+  }
+  .contact-copy {
+    text-align: center;
+  }
+}
+/*-----------s9_footer ---------*/
+
+@media (max-width: 767px) {
+  .s9_footer_grid {
+    font-size: small;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+      "footer_hours"
+      "footer_menu"
+      "footer_museum"
+      "footer_painting_names"
+      "footer_links"
+      "footer_img"
+      "footer_copyright"
+      ;
+  }
+  .footer_menu, .footer_museum, .footer_painting_names, .footer_links{
+    border-top: 1px dashed black;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+  .footer_museum h1 {
+    text-align: center;
+  }
+  .footer_museum,
+  .footer_links {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  .footer_img {
+    width: 50%;
+    justify-self: flex-end;
+  }
+  .footer_hours {
+    text-align: center;
+  }
+  
+
+}
+@media (min-width: 768px) {
+  .s9_footer_grid {
+    font-size: initial;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "footer_hours footer_img"
+      "footer_menu footer_museum"
+      "footer_painting_names footer_links";
+  }
+  .footer_meuseum,
+  .footer_links,
+  .footer_links h1 {
+    flex: none;
+    padding-top: 0;
+    text-align: left;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+  }
+  .footer_img{
+    width: 50%;
+    justify-self: flex-end;
+  }
+}
+/*-----------s10_copyright ---------*/
